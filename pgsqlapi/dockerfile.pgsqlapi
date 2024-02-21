@@ -1,0 +1,11 @@
+FROM postgres
+
+WORKDIR /db
+
+#COPY indexadores_backup_19.5.2023 .   
+
+#RUN pg_restore -U postgres -d indexadores -1 /db/indexadores_backup_19.5.2023
+
+
+
+

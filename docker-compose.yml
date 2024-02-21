@@ -1,0 +1,67 @@
+version: '3.9'
+services:
+
+  pgsqlapi:
+    container_name: db-api
+    build:
+      context: ./pgsqlapi
+      dockerfile: dockerfile.pgsqlapi
+    ports:
+      - '5438:5432'
+    #networks:
+    #  - prod
+    restart: always  
+    volumes:
+      - ./pgsqlapi/db:/var/lib/postgresql/data      
+    env_file:
+      - ./env/pgsqlapi.env
+
+   
+  api:
+    container_name: api-indice
+    build:
+      context: ./api
+      dockerfile: ./dockerfile.api         
+    ports:
+      - '8001:8001'
+    #networks:
+    #  - prod
+    #depends_on:
+    #  - pgsql2
+    restart: on-failure
+    volumes:
+      - ./api:/api          
+    env_file:
+      - ./env/api.env 
+
+  revise:
+    container_name: revise
+    build:
+      context: ./revise
+      dockerfile: ./dockerfile.revise    
+    #command: python3 bt_main.py 
+    #command: uwsgi --socket app:8000 --module acd_app.wsgi --master --enable-threads                        
+    #stdin_open: true
+    #tty: true
+    #command: tail -f /dev/null
+    #ports:
+    #  - '8000:8000'
+    #networks:
+    #  - sicalc     
+    #depends_on:
+    #  - serpro
+    #  - api
+    #restart: on-failure
+    volumes:
+      - ./revise:/revise
+      #- static_data:/app/static     
+    env_file:
+      - ./env/revise.env
+
+
+#networks:
+#  prod:
+
+#volumes:
+#  static_data:    
+

@@ -1,0 +1,38 @@
+FROM ubuntu:focal 
+
+WORKDIR /revise
+
+COPY ./requirements.txt .
+
+RUN apt update -y
+RUN apt upgrade -y
+
+RUN apt install cron -y
+RUN apt install build-essential python3 -y
+RUN apt install python-dev -y
+
+RUN apt install python3-pip -y
+RUN apt install systemctl -y
+
+RUN pip3 install wheel
+
+RUN pip3 install --no-cache-dir -r requirements.txt
+
+RUN export PYTHONIOENCODING=utf8
+RUN export LANG=en_US.UTF-8
+
+WORKDIR /revise
+
+COPY . .
+
+COPY cron_job /etc/cron.d/cron_job
+
+RUN chmod 644 /etc/cron.d/cron_job 
+
+#RUN chmod +x cron-script.sh
+
+#RUN chmod 644 /etc/cron.d/cron_job && crontab /etc/cron.d/cron_job
+
+#RUN service cron start
+
+ENTRYPOINT [ "/revise/cron-script.sh" ]
