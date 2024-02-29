@@ -52,6 +52,13 @@ class Ipca15(Base):
     data = Column(DateTime(True))
     valor = Column(Numeric)
 
+class Igpm(Base):
+    __tablename__ = 'igpm'
+
+    id = Column(BigInteger, primary_key=True)
+    data = Column(DateTime(True))
+    valor = Column(Numeric)    
+
 class LogAtualizacao(Base):
     ''' armazena os registros de atualização das tabelas '''
     __tablename__ = 'logatualizacao'
