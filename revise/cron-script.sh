@@ -8,7 +8,7 @@ pkill -f cron
 
 systemctl start cron.service
 
-echo "Verificarndo se o cron está ativo..."
+echo "Verificando se o cron está ativo..."
 
 systemctl status cron.service 
 

@@ -1,6 +1,6 @@
 import os
 from datetime import datetime
-from bt_indexadores import *
+from bt_consulta_bcb_indexadores import *
 
 
 # Ler a data do arquivo

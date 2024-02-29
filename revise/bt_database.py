@@ -2,6 +2,8 @@ from bt_queries import *
 from bt_constantes import *
 from bt_conexao import *
 import datetime
+from bt_conf_debug import *
+
 
 def obter_nome_tabela(codigo,query):
     with conectar_sql() as conn:
@@ -11,6 +13,30 @@ def obter_nome_tabela(codigo,query):
             cursor.execute(query_substituida)
             row = cursor.fetchone()
             return row[0]
+    return None
+
+
+def obter_codigo_tabela(nome,query):
+    with conectar_sql() as conn:
+        if conn is not None:
+            cursor = conn.cursor()
+            query_substituida = query.replace('$1', nome)            
+            cursor.execute(query_substituida)
+            row = cursor.fetchone()
+            return row[0]
+    return None
+
+
+def buscar_codigo_bcb_indexadores():
+    dicionario = {}
+    conn = conectar_sql()
+    if conn is not None:
+        cursor = conn.cursor()
+        cursor.execute(query15)
+        rows = cursor.fetchall()
+        for row in rows:
+            dicionario[row[0]]=row[1]            
+        return dicionario
     return None
 
 def selecionar_multiplos(query):
@@ -54,8 +80,6 @@ def selecionar_codigos_datas(lista_codigos, query):
         return lista
     return None
 
-
-
 def selecionar_codigos_tabelas(lista, query):
     ''' esta função recebe uma lista de tuplas (nome da tabela, data do último
         registro dessa tabela) e retorna uma lista de tuplas (código da tabela,
@@ -72,8 +96,7 @@ def selecionar_codigos_tabelas(lista, query):
         cursor.close()
         conn.close()
         return lista_codigo_nome_data
-    return None
-    
+    return None  
     
 def seleciona_ultima_data_das_tabelas(lista_tabelas,query):
     lista = []
@@ -94,13 +117,13 @@ def update_datas_logatualizacao(lista,query):
     with conectar_sql() as conn:
         if conn is not None:
             cursor = conn.cursor()
-            print("===============================================================")
-            print("Atualização da coluna data_atualizacao na tabela logatualizacao")
+            logging.info("===============================================================")
+            logging.info("Atualização da coluna data_atualizacao na tabela logatualizacao")
             for codigo, nome, data in lista:
                 data_formatada = data.strftime("%Y-%m-%d")                
                 query_substituida = query.replace('$1', data_formatada).replace('$2', str(codigo))            
                 cursor.execute(query_substituida)
-                print(nome," data atualizada: ", data_formatada)
+                logging.info(f"{nome} data atualizada: {data_formatada}")
             conn.commit()
             return True
     return None

@@ -16,6 +16,8 @@ RUN apt install systemctl -y
 
 RUN pip3 install wheel
 
+RUN pip3 install aiohttp
+
 RUN pip3 install --no-cache-dir -r requirements.txt
 
 RUN export PYTHONIOENCODING=utf8

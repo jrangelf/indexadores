@@ -46,3 +46,18 @@ query12 = "INSERT INTO $1(data, valor) VALUES ('$2', $3)"
 query13 = "SELECT nome FROM descricao_tabelas WHERE codigo=$1"
 
 query14 = "UPDATE logatualizacao SET processar=0, data_atualizacao='$1' WHERE codigo_tabela=$2"
+
+query15 = "SELECT nome, descricao FROM indexadores WHERE descricao <> ''"
+
+query16 = "SELECT B.nome, A.data_atualizacao \
+           FROM logatualizacao A \
+           INNER JOIN indexadores B ON A.indexador = B.codigo \
+           WHERE A.processar=1"
+
+query17 = "SELECT indexadores.nome, descricao_tabelas.nome \
+           FROM descricao_tabelas \
+           JOIN indexadores ON CAST(descricao_tabelas.indexador AS INTEGER) = indexadores.codigo \
+           JOIN logatualizacao ON CAST(descricao_tabelas.indexador AS INTEGER) = logatualizacao.indexador \
+           WHERE logatualizacao.processar = 1" 
+
+query18 = "SELECT codigo FROM descricao_tabelas WHERE nome='$1'"

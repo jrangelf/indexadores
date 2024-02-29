@@ -3,35 +3,38 @@ from bt_database import *
 from bt_consulta_bcb_indexadores import *
 from bt_data_tools import *
 
-''' Este módulo vai atualizar os indexadores quinzenais INPC e IPCA
-    com a data do mês subsequente ao que estiver indicado na tabela
+''' Este módulo vai atualizar os indexadores     com a data do mês subsequente ao que estiver indicado na tabela
     logatualizacao '''
 
-'''
-COD_INPC = 100
-COD_IPCA = 102
+def atualizar_indexadores(indexadores):
+    
+    atualizadas = []   
+    codigos = selecionar_multiplos(query17)
+    codigo_dict = {codigo[0]: codigo[1] for codigo in codigos}
 
-def atualizar_indexador_quinzenal():
-    codigos = selecionar_multiplos(query10)
+    print(f"codigo_dict: {codigo_dict}")
+    print(f"indexadores: {indexadores}")
 
-    for codigo in codigos:
-        data_inicial = incrementa_mes(codigo[1])
-        data_final = incrementa_mes(data_inicial)
-        dt_inicial_str = converter_data_para_str(data_inicial)
-        dt_final_str = converter_data_para_str(data_final)
+    for indexador in indexadores:
+        nome_indexador = indexador[0]
+        tabela = codigo_dict.get(nome_indexador)
+        dt_formatada = converter_formato_ano_mes_dia(indexador[1])
+        valor = indexador[2]
+        codigotab = obter_codigo_tabela(tabela,query18)
 
-        if codigo[0] == COD_IPCA or codigo[0] == COD_INPC:
-            codigo_index = INPC if codigo[0] == COD_INPC else IPCA
-            indexador = consulta_bc_periodo(codigo_index,dt_inicial_str,dt_final_str)
-            dt_formatada=converter_formato_ano_mes_dia(indexador[0]['data'])
+        print(f"{tabela} ({codigotab})  {dt_formatada} {valor}")        
+
+        pos=inserir_indice_bcb(dt_formatada, valor, query12, tabela)
             
-            nome_tabela = obter_nome_tabela(codigo[0], query13)
-            pos=inserir_indice_bcb(dt_formatada, indexador[0]['valor'], query12, nome_tabela)
-            
-            if pos:
-                resetar_flag_processar(codigo[0],dt_formatada,query14)
-'''
-        
+        if pos:
+            atualizadas.append([indexador[0], indexador[1], indexador[2]])
+            resetar_flag_processar(codigotab,dt_formatada,query14)
+
+    return atualizadas
+
+
+"""
+      indexadores_do_mes.append([indexador, data, valor])
 def buscar_indexadores_quinzenais():   
     
     dictregistros = {}
@@ -76,5 +79,5 @@ def buscar_indexadores_quinzenais():
 
     return indexadores_quinzenais
 
-
+"""
         

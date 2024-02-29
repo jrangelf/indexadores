@@ -1,5 +1,29 @@
+import os
 from datetime import datetime, timedelta
-from bt_conf_debug import *
+
+
+def dia_de_hoje():
+    return datetime.now().date()
+
+def existe_arquivo(nome_arquivo):
+    return os.path.exists(nome_arquivo)
+
+def ler_data_arquivo(nome_arquivo):
+    if os.path.exists(nome_arquivo):
+        with open(nome_arquivo, 'r') as arquivo:
+            data_texto = arquivo.read().strip()
+            return datetime.strptime(data_texto, '%Y-%m-%d').date()
+    return None
+
+def gravar_data_arquivo(nome_arquivo, data):
+    with open(nome_arquivo, 'w') as arquivo:
+        arquivo.write(data.strftime('%Y-%m-%d'))
+
+def verificar_quinzena(data1):
+    return data1.day == 15    
+
+def mesmo_mes(data1, data2):
+    return data1.year == data2.year and data1.month == data2.month
 
 def converter_formato_ano_mes_dia(data_str):
     ''' converte a string 01/07/2023 em 2023-07-01 '''
@@ -23,14 +47,22 @@ def converter_string_para_datetime(data_str):
 
 def incrementa_mes(data):
     ''' converte 2023-07-01 00:00:00+0000 em 2023-08-01 00:00:00+0000'''
-    logging.info(f'data: {data}')
+    
     if data is not None:        
         ano = data.year + (data.month + 1) // 12
-        logging.info(f'ano: {ano}')
         mes = (data.month + 1) % 12
-        logging.info(f'mes: {mes}')
-        dia = min(data.day, (data.replace(month=mes, year=ano) - timedelta(days=1)).day)
-        logging.info(f'dia: {dia}')
-        data_incrementada = data.replace(year=ano, month=mes, day=dia)
-        logging.info(f'data_incrementada: {data_incrementada}')
+        if mes == 0:
+            mes = 12       
+        dia = min(data.day, (data.replace(month=mes, year=ano) - timedelta(days=1)).day)        
+        data_incrementada = data.replace(year=ano, month=mes, day=dia)        
         return data_incrementada
+    
+def incrementa_mes_str(data_str):
+    # Converter a string de data para um objeto datetime
+    data = datetime.strptime(data_str, '%d/%m/%Y')
+
+    # Incrementar o mês
+    data_proximo_mes = data.replace(day=1) + timedelta(days=32)
+    data_proximo_mes_formatado = data_proximo_mes.strftime('01/%m/%Y')
+
+    return data_proximo_mes_formatado

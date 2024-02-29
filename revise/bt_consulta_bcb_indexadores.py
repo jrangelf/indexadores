@@ -1,8 +1,8 @@
 import json
 import requests
-from bs4 import BeautifulSoup
 import datetime
 from datetime import datetime
+from bs4 import BeautifulSoup
 
 
 def consulta_bc_ultimos(codigo_bcb, ultimos):
@@ -63,34 +63,28 @@ def consulta_bc(codigo_bcb):
         return None
 
 
-def consulta_bc_periodo(codigo_bcb, inicio, final):
+def consultar_bc_periodo(codigo_bcb, inicio, final):
     url = f'https://api.bcb.gov.br/dados/serie/bcdata.sgs.{codigo_bcb}/dados?formato=json&dataInicial={inicio}&dataFinal={final}'
-    response = requests.get(url)
     
-    if response.status_code == 200:
-        data = json.loads(response.text)
-        #print(f"data:\{data}\n\n")
-        # Criar uma lista para armazenar os dicionários de dados
-        df = []
-        
-        for item in data:
-            data_str = item['data']
-            valor = float(item['valor'])
-            
-            # Converter a data para o formato datetime
-            data_datetime = datetime.strptime(data_str, '%d/%m/%Y')
-            
-            # Criar o dicionário com a data e o valor e adicioná-lo à lista
-            df.append({
-                'data': data_datetime,
-                'valor': valor
-            })
-        
-        return data #df
-    else:
-        print(f"Erro ao acessar a API. Código de status: {response.status_code}")
+    try:
+        # Definir timeout de 5 segundos para a solicitacao
+        response = requests.get(url, timeout=5)
+    
+        if response.status_code == 200:
+            try:
+                data = json.loads(response.text)
+                return data
+            except:
+                return None 
+        else:
+            print(f"Erro ao acessar a API. Código de status: {response.status_code}")
+            return None
+    except requests.Timeout:
+        print(f"A solicitação {codigo_bcb} excedeu o tempo limite.")
         return None
-
+    except requests.RequestException as e:
+        print(f"Erro ao fazer a solicitaçao: {e}")
+        return None
 
 def consulta_selic_receita():
 

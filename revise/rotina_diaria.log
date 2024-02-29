@@ -1,547 +1,129 @@
-data atual: 2023-09-02
-data do arquivo: 2023-09-01
-não houve mudança de mês
-data atual: 2023-09-03
-data do arquivo: 2023-09-01
-não houve mudança de mês
-data atual: 2023-09-04
-data do arquivo: 2023-09-01
-não houve mudança de mês
-data atual: 2023-09-05
-data do arquivo: 2023-09-01
-não houve mudança de mês
-data atual: 2023-09-06
-data do arquivo: 2023-09-01
-não houve mudança de mês
-data atual:      2023-09-07
-data do arquivo: 2023-09-01
-não houve mudança de mês
-------------------------
-data atual:      2023-09-08
-data do arquivo: 2023-09-01
-não houve mudança de mês
-------------------------
-data atual:      2023-09-09
-data do arquivo: 2023-09-01
-não houve mudança de mês
-------------------------
-data atual:      2023-09-10
-data do arquivo: 2023-09-01
-não houve mudança de mês
-------------------------
-data atual:      2023-09-11
-data do arquivo: 2023-09-01
-não houve mudança de mês
-------------------------
-data atual:      2023-09-12
-data do arquivo: 2023-09-01
-não houve mudança de mês
-------------------------
-data atual:      2023-09-13
-data do arquivo: 2023-09-01
-não houve mudança de mês
-------------------------
-data atual:      2023-09-14
-data do arquivo: 2023-09-01
-não houve mudança de mês
-------------------------
-data atual:      2023-09-15
-data do arquivo: 2023-09-01
-não houve mudança de mês
-------------------------
-verificar atualização quinzenal - INPC/IPCA
-===============================================================
-Novo indexador  inpc  data:  2023-08-01 valor:  0.20
-===============================================================
-Update colunas data e processar na tabela logatualizacao:  100
-===============================================================
-Novo indexador  ipca  data:  2023-08-01 valor:  0.23
-===============================================================
-Update colunas data e processar na tabela logatualizacao:  102
-data atual:      2023-09-16
-data do arquivo: 2023-09-01
-não houve mudança de mês
-------------------------
-data atual:      2023-09-26
-data do arquivo: 2023-09-01
-não houve mudança de mês
-------------------------
-data atual:      2023-09-27
-data do arquivo: 2023-09-01
-não houve mudança de mês
-------------------------
-data atual:      2023-09-28
-data do arquivo: 2023-09-01
-não houve mudança de mês
-------------------------
-data atual:      2023-09-29
-data do arquivo: 2023-09-01
-não houve mudança de mês
-------------------------
-data atual:      2023-09-30
-data do arquivo: 2023-09-01
-não houve mudança de mês
-------------------------
-data atual:      2023-10-01
-data do arquivo: 2023-09-01
-houve mudança de mês
---------------------
-===============================================================
-Atualização da coluna data_atualizacao na tabela logatualizacao
-inpc  data atualizada:  2023-08-01
-ipca  data atualizada:  2023-08-01
-tr  data atualizada:  2023-08-01
-selic  data atualizada:  2023-08-01
-seliccopom  data atualizada:  2023-08-01
-ipca15  data atualizada:  2023-08-01
-===============================================================
-Atualização da coluna processar na tabela logatualizacao
-100  processar=1
-102  processar=1
-104  processar=1
-106  processar=1
-108  processar=1
-110  processar=1
-===============================================================
-Novo indexador  tr  data:  2023-09-01 valor:  0.1130
-------------------------------------------------------------
-tr valor:  0.1130 data:  2023-09-01
-===============================================================
-Update colunas data e processar na tabela logatualizacao:  104
-zerar o campo processar da tabela logatualizacao 
-------------------------------------------------------------
+============================================================
+data_atual: 24/02/2024
+data_atual_mes_subsequente: 23/03/2024
+{'selic': 4390, 'tr': 226, 'ipca': 433, 'ipca15': 7478, 'inpc': 188, 'selic_copom': 432}
+A solicitação 7478 excedeu o tempo limite.
+{'ipca15': 7478}
+A solicitação 7478 excedeu o tempo limite.
+{'ipca15': 7478}
+Indexadores do mês:
+selic:  01/01/2024 valor: 0.97
+tr:  01/02/2024 valor: 0.0875
+ipca:  01/01/2024 valor: 0.42
+inpc:  01/01/2024 valor: 0.57
+selic_copom:  01/01/2024 valor: 11.75
+ipca15:  01/01/2024 valor: 0.31
 ============================================ Receita Federal
-Texto completo do <th>: Última Selic disponível (09/2023)
+Texto completo do <th>: Última Selic disponível (01/2024)
 Conteúdo do <td> associado: 0,97
 ============================================================
-===============================================================
-Novo indexador  selic  data:  2023-09-01 valor:  0.97
-------------------------------------------------------------
-selic valor:  0.97 data:  2023-09-01
-===============================================================
-Update colunas data e processar na tabela logatualizacao:  106
-zerar o campo processar da tabela logatualizacao 
-------------------------------------------------------------
-===============================================================
-Novo indexador  seliccopom  data:  2023-09-01 valor:  13.25
-------------------------------------------------------------
-seliccopom valor:  13.25 data:  2023-09-01
-===============================================================
-Update colunas data e processar na tabela logatualizacao:  108
-zerar o campo processar da tabela logatualizacao 
-------------------------------------------------------------
-data atual:      2023-10-02
-data do arquivo: 2023-10-01
-não houve mudança de mês
-------------------------
-data atual:      2023-10-03
-data do arquivo: 2023-10-01
-não houve mudança de mês
-------------------------
-data atual:      2023-10-04
-data do arquivo: 2023-10-01
-não houve mudança de mês
-------------------------
-data atual:      2023-10-05
-data do arquivo: 2023-10-01
-não houve mudança de mês
-------------------------
-data atual:      2023-10-06
-data do arquivo: 2023-10-01
-não houve mudança de mês
-------------------------
-data atual:      2023-10-07
-data do arquivo: 2023-10-01
-não houve mudança de mês
-------------------------
-data atual:      2023-10-08
-data do arquivo: 2023-10-01
-não houve mudança de mês
-------------------------
-data atual:      2023-10-09
-data do arquivo: 2023-10-01
-não houve mudança de mês
-------------------------
-data atual:      2023-10-10
-data do arquivo: 2023-10-01
-não houve mudança de mês
-------------------------
-data atual:      2023-10-11
-data do arquivo: 2023-10-01
-não houve mudança de mês
-------------------------
-data atual:      2023-10-12
-data do arquivo: 2023-10-01
-não houve mudança de mês
-------------------------
-data atual:      2023-10-13
-data do arquivo: 2023-10-01
-não houve mudança de mês
-------------------------
-data atual:      2023-10-14
-data do arquivo: 2023-10-01
-não houve mudança de mês
-------------------------
-data atual:      2023-10-15
-data do arquivo: 2023-10-01
-não houve mudança de mês
-------------------------
-verificar atualização quinzenal - INPC/IPCA
-===============================================================
-Novo indexador  inpc  data:  2023-09-01 valor:  0.11
-===============================================================
-Update colunas data e processar na tabela logatualizacao:  100
-===============================================================
-Novo indexador  ipca  data:  2023-09-01 valor:  0.26
-===============================================================
-Update colunas data e processar na tabela logatualizacao:  102
-data atual:      2023-10-16
-data do arquivo: 2023-10-01
-não houve mudança de mês
-------------------------
-data atual:      2023-10-17
-data do arquivo: 2023-10-01
-não houve mudança de mês
-------------------------
-data atual:      2023-10-18
-data do arquivo: 2023-10-01
-não houve mudança de mês
-------------------------
-data atual:      2023-10-19
-data do arquivo: 2023-10-01
-não houve mudança de mês
-------------------------
-data atual:      2023-10-20
-data do arquivo: 2023-10-01
-não houve mudança de mês
-------------------------
-data atual:      2023-10-21
-data do arquivo: 2023-10-01
-não houve mudança de mês
-------------------------
-data atual:      2023-10-25
-data do arquivo: 2023-10-01
-não houve mudança de mês
-------------------------
-data atual:      2023-10-26
-data do arquivo: 2023-10-01
-não houve mudança de mês
-------------------------
-data atual:      2023-10-27
-data do arquivo: 2023-10-01
-não houve mudança de mês
-------------------------
-data atual:      2023-10-28
-data do arquivo: 2023-10-01
-não houve mudança de mês
-------------------------
-data atual:      2023-10-29
-data do arquivo: 2023-10-01
-não houve mudança de mês
-------------------------
-data atual:      2023-10-30
-data do arquivo: 2023-10-01
-não houve mudança de mês
-------------------------
-data atual:      2023-10-31
-data do arquivo: 2023-10-01
-não houve mudança de mês
-------------------------
-data atual:      2023-11-01
-data do arquivo: 2023-10-01
-houve mudança de mês
---------------------
-===============================================================
-Atualização da coluna data_atualizacao na tabela logatualizacao
-inpc  data atualizada:  2023-09-01
-ipca  data atualizada:  2023-09-01
-tr  data atualizada:  2023-09-01
-selic  data atualizada:  2023-09-01
-seliccopom  data atualizada:  2023-09-01
-ipca15  data atualizada:  2023-08-01
-===============================================================
-Atualização da coluna processar na tabela logatualizacao
-100  processar=1
-102  processar=1
-104  processar=1
-106  processar=1
-108  processar=1
-110  processar=1
-===============================================================
-Novo indexador  tr  data:  2023-10-01 valor:  0.1056
-------------------------------------------------------------
-tr valor:  0.1056 data:  2023-10-01
-===============================================================
-Update colunas data e processar na tabela logatualizacao:  104
-zerar o campo processar da tabela logatualizacao 
-------------------------------------------------------------
-============================================ Receita Federal
-Texto completo do <th>: Última Selic disponível (10/2023)
-Conteúdo do <td> associado: 1,00
 ============================================================
-===============================================================
-Novo indexador  selic  data:  2023-10-01 valor:  1.0
-------------------------------------------------------------
-selic valor:  1.0 data:  2023-10-01
-===============================================================
-Update colunas data e processar na tabela logatualizacao:  106
-zerar o campo processar da tabela logatualizacao 
-------------------------------------------------------------
-===============================================================
-Novo indexador  seliccopom  data:  2023-10-01 valor:  12.75
-------------------------------------------------------------
-seliccopom valor:  12.75 data:  2023-10-01
-===============================================================
-Update colunas data e processar na tabela logatualizacao:  108
-zerar o campo processar da tabela logatualizacao 
-------------------------------------------------------------
-data atual:      2023-11-02
-data do arquivo: 2023-11-01
-não houve mudança de mês
-------------------------
-data atual:      2023-11-03
-data do arquivo: 2023-11-01
-não houve mudança de mês
-------------------------
-data atual:      2023-11-04
-data do arquivo: 2023-11-01
-não houve mudança de mês
-------------------------
-data atual:      2023-11-05
-data do arquivo: 2023-11-01
-não houve mudança de mês
-------------------------
-data atual:      2023-11-06
-data do arquivo: 2023-11-01
-não houve mudança de mês
-------------------------
-data atual:      2023-11-07
-data do arquivo: 2023-11-01
-não houve mudança de mês
-------------------------
-data atual:      2023-11-08
-data do arquivo: 2023-11-01
-não houve mudança de mês
-------------------------
-data atual:      2023-11-09
-data do arquivo: 2023-11-01
-não houve mudança de mês
-------------------------
-data atual:      2023-11-10
-data do arquivo: 2023-11-01
-não houve mudança de mês
-------------------------
-data atual:      2023-11-11
-data do arquivo: 2023-11-01
-não houve mudança de mês
-------------------------
-data atual:      2023-11-12
-data do arquivo: 2023-11-01
-não houve mudança de mês
-------------------------
-data atual:      2023-11-13
-data do arquivo: 2023-11-01
-não houve mudança de mês
-------------------------
-data atual:      2023-11-14
-data do arquivo: 2023-11-01
-não houve mudança de mês
-------------------------
-data atual:      2023-11-18
-data do arquivo: 2023-11-01
-não houve mudança de mês
-------------------------
-data atual:      2023-11-19
-data do arquivo: 2023-11-01
-não houve mudança de mês
-------------------------
-data atual:      2023-11-20
-data do arquivo: 2023-11-01
-não houve mudança de mês
-------------------------
-data atual:      2023-11-21
-data do arquivo: 2023-11-01
-não houve mudança de mês
-------------------------
-data atual:      2023-11-22
-data do arquivo: 2023-11-01
-não houve mudança de mês
-------------------------
-data atual:      2023-11-23
-data do arquivo: 2023-11-01
-não houve mudança de mês
-------------------------
-data atual:      2023-11-24
-data do arquivo: 2023-11-01
-não houve mudança de mês
-------------------------
-data atual:      2023-11-25
-data do arquivo: 2023-11-01
-não houve mudança de mês
-------------------------
-data atual:      2023-11-29
-data do arquivo: 2023-11-01
-não houve mudança de mês
-------------------------
-data atual:      2023-11-30
-data do arquivo: 2023-11-01
-não houve mudança de mês
-------------------------
-data atual:      2023-12-01
-data do arquivo: 2023-11-01
-houve mudança de mês
---------------------
-===============================================================
-Atualização da coluna data_atualizacao na tabela logatualizacao
-inpc  data atualizada:  2023-09-01
-ipca  data atualizada:  2023-09-01
-tr  data atualizada:  2023-10-01
-selic  data atualizada:  2023-10-01
-seliccopom  data atualizada:  2023-10-01
-ipca15  data atualizada:  2023-08-01
-===============================================================
-Atualização da coluna processar na tabela logatualizacao
-100  processar=1
-102  processar=1
-104  processar=1
-106  processar=1
-108  processar=1
-110  processar=1
-Traceback (most recent call last):
-  File "/revise/bt_rotina_diaria.py", line 63, in <module>
-    atualizar_indexador_mensal()
-  File "/revise/bt_atualizar_indexador_mensal.py", line 32, in atualizar_indexador_mensal
-    data_final = incrementa_mes(data_inicial)
-  File "/revise/bt_data_tools.py", line 29, in incrementa_mes
-    dia = min(data.day, (data.replace(month=mes, year=ano) - timedelta(days=1)).day)
-ValueError: month must be in 1..12
-data atual:      2023-12-02
-data do arquivo: 2023-11-01
-houve mudança de mês
---------------------
-===============================================================
-Atualização da coluna data_atualizacao na tabela logatualizacao
-inpc  data atualizada:  2023-09-01
-ipca  data atualizada:  2023-09-01
-tr  data atualizada:  2023-10-01
-selic  data atualizada:  2023-10-01
-seliccopom  data atualizada:  2023-10-01
-ipca15  data atualizada:  2023-08-01
-===============================================================
-Atualização da coluna processar na tabela logatualizacao
-100  processar=1
-102  processar=1
-104  processar=1
-106  processar=1
-108  processar=1
-110  processar=1
-Traceback (most recent call last):
-  File "/revise/bt_rotina_diaria.py", line 63, in <module>
-    atualizar_indexador_mensal()
-  File "/revise/bt_atualizar_indexador_mensal.py", line 32, in atualizar_indexador_mensal
-    data_final = incrementa_mes(data_inicial)
-  File "/revise/bt_data_tools.py", line 29, in incrementa_mes
-    dia = min(data.day, (data.replace(month=mes, year=ano) - timedelta(days=1)).day)
-ValueError: month must be in 1..12
-data atual:      2023-12-03
-data do arquivo: 2023-11-01
-houve mudança de mês
---------------------
-===============================================================
-Atualização da coluna data_atualizacao na tabela logatualizacao
-inpc  data atualizada:  2023-09-01
-ipca  data atualizada:  2023-09-01
-tr  data atualizada:  2023-10-01
-selic  data atualizada:  2023-10-01
-seliccopom  data atualizada:  2023-10-01
-ipca15  data atualizada:  2023-08-01
-===============================================================
-Atualização da coluna processar na tabela logatualizacao
-100  processar=1
-102  processar=1
-104  processar=1
-106  processar=1
-108  processar=1
-110  processar=1
-Traceback (most recent call last):
-  File "/revise/bt_rotina_diaria.py", line 63, in <module>
-    atualizar_indexador_mensal()
-  File "/revise/bt_atualizar_indexador_mensal.py", line 32, in atualizar_indexador_mensal
-    data_final = incrementa_mes(data_inicial)
-  File "/revise/bt_data_tools.py", line 29, in incrementa_mes
-    dia = min(data.day, (data.replace(month=mes, year=ano) - timedelta(days=1)).day)
-ValueError: month must be in 1..12
-data atual:      2024-02-20
-data do arquivo: 2023-11-01
-houve mudança de mês
---------------------
-===============================================================
-Atualização da coluna data_atualizacao na tabela logatualizacao
-inpc  data atualizada:  2023-09-01
-ipca  data atualizada:  2023-09-01
-tr  data atualizada:  2023-10-01
-selic  data atualizada:  2023-10-01
-seliccopom  data atualizada:  2023-10-01
-ipca15  data atualizada:  2023-08-01
-===============================================================
-Atualização da coluna processar na tabela logatualizacao
-100  processar=1
-102  processar=1
-104  processar=1
-106  processar=1
-108  processar=1
-110  processar=1
-Traceback (most recent call last):
-  File "/revise/bt_rotina_diaria.py", line 63, in <module>
-    atualizar_indexador_mensal()
-  File "/revise/bt_atualizar_indexador_mensal.py", line 32, in atualizar_indexador_mensal
-    data_final = incrementa_mes(data_inicial)
-  File "/revise/bt_data_tools.py", line 29, in incrementa_mes
-    dia = min(data.day, (data.replace(month=mes, year=ano) - timedelta(days=1)).day)
-ValueError: month must be in 1..12
-data atual:      2024-02-21
-data do arquivo: 2023-11-01
-houve mudança de mês
---------------------
-===============================================================
-Atualização da coluna data_atualizacao na tabela logatualizacao
-inpc  data atualizada:  2023-09-01
-ipca  data atualizada:  2023-09-01
-tr  data atualizada:  2023-10-01
-selic  data atualizada:  2023-10-01
-seliccopom  data atualizada:  2023-10-01
-ipca15  data atualizada:  2023-08-01
-===============================================================
-Atualização da coluna processar na tabela logatualizacao
-100  processar=1
-102  processar=1
-104  processar=1
-106  processar=1
-108  processar=1
-110  processar=1
-Traceback (most recent call last):
-  File "/revise/bt_rotina_diaria.py", line 63, in <module>
-    atualizar_indexador_mensal()
-  File "/revise/bt_atualizar_indexador_mensal.py", line 32, in atualizar_indexador_mensal
-    data_final = incrementa_mes(data_inicial)
-  File "/revise/bt_data_tools.py", line 29, in incrementa_mes
-    dia = min(data.day, (data.replace(month=mes, year=ano) - timedelta(days=1)).day)
-ValueError: month must be in 1..12
-
-
-
-
-
-
-
-
-
-
-
-
-
------------------------------------------------------------------
-
-
-
-
+data_atual: 25/02/2024
+data_atual_mes_subsequente: 24/03/2024
+{'selic': 4390, 'tr': 226, 'ipca': 433, 'ipca15': 7478, 'inpc': 188, 'selic_copom': 432}
+A solicitação 4390 excedeu o tempo limite.
+A solicitação 226 excedeu o tempo limite.
+A solicitação 433 excedeu o tempo limite.
+A solicitação 7478 excedeu o tempo limite.
+A solicitação 188 excedeu o tempo limite.
+{'selic': 4390, 'tr': 226, 'ipca': 433, 'ipca15': 7478, 'inpc': 188}
+A solicitação 433 excedeu o tempo limite.
+{'ipca': 433}
+Indexadores do mês:
+selic_copom:  01/01/2024 valor: 11.75
+selic:  01/01/2024 valor: 0.97
+tr:  01/02/2024 valor: 0.0875
+ipca15:  01/01/2024 valor: 0.31
+inpc:  01/01/2024 valor: 0.57
+ipca:  01/01/2024 valor: 0.42
+============================================ Receita Federal
+Texto completo do <th>: Última Selic disponível (01/2024)
+Conteúdo do <td> associado: 0,97
+============================================================
+============================================================
+data_atual: 26/02/2024
+data_atual_mes_subsequente: 25/03/2024
+{'selic': 4390, 'tr': 226, 'ipca': 433, 'ipca15': 7478, 'inpc': 188, 'selic_copom': 432}
+A solicitação 4390 excedeu o tempo limite.
+A solicitação 226 excedeu o tempo limite.
+A solicitação 7478 excedeu o tempo limite.
+A solicitação 432 excedeu o tempo limite.
+{'selic': 4390, 'tr': 226, 'ipca15': 7478, 'selic_copom': 432}
+A solicitação 226 excedeu o tempo limite.
+{'tr': 226}
+Indexadores do mês:
+ipca:  01/01/2024 valor: 0.42
+inpc:  01/01/2024 valor: 0.57
+selic:  01/01/2024 valor: 0.97
+ipca15:  01/01/2024 valor: 0.31
+selic_copom:  01/01/2024 valor: 11.75
+tr:  01/02/2024 valor: 0.0875
+============================================ Receita Federal
+Texto completo do <th>: Última Selic disponível (01/2024)
+Conteúdo do <td> associado: 0,97
+============================================================
+============================================================
+data_atual: 27/02/2024
+data_atual_mes_subsequente: 26/03/2024
+{'selic': 4390, 'tr': 226, 'ipca': 433, 'ipca15': 7478, 'inpc': 188, 'selic_copom': 432}
+A solicitação 4390 excedeu o tempo limite.
+A solicitação 226 excedeu o tempo limite.
+A solicitação 7478 excedeu o tempo limite.
+A solicitação 188 excedeu o tempo limite.
+{'selic': 4390, 'tr': 226, 'ipca15': 7478, 'inpc': 188}
+A solicitação 226 excedeu o tempo limite.
+{'tr': 226}
+Indexadores do mês:
+ipca:  01/01/2024 valor: 0.42
+selic_copom:  01/01/2024 valor: 11.75
+selic:  01/01/2024 valor: 0.97
+ipca15:  01/01/2024 valor: 0.31
+inpc:  01/01/2024 valor: 0.57
+tr:  01/02/2024 valor: 0.0875
+============================================ Receita Federal
+Texto completo do <th>: Última Selic disponível (01/2024)
+Conteúdo do <td> associado: 0,97
+============================================================
+============================================================
+data_atual: 28/02/2024
+data_atual_mes_subsequente: 27/03/2024
+{'selic': 4390, 'tr': 226, 'ipca': 433, 'ipca15': 7478, 'inpc': 188, 'selic_copom': 432}
+A solicitação 7478 excedeu o tempo limite.
+A solicitação 188 excedeu o tempo limite.
+{'ipca15': 7478, 'inpc': 188}
+A solicitação 7478 excedeu o tempo limite.
+A solicitação 188 excedeu o tempo limite.
+{'ipca15': 7478, 'inpc': 188}
+Indexadores do mês:
+selic:  01/01/2024 valor: 0.97
+tr:  01/02/2024 valor: 0.0875
+ipca:  01/01/2024 valor: 0.42
+selic_copom:  01/01/2024 valor: 11.75
+ipca15:  01/01/2024 valor: 0.31
+inpc:  01/01/2024 valor: 0.57
+============================================ Receita Federal
+Texto completo do <th>: Última Selic disponível (01/2024)
+Conteúdo do <td> associado: 0,97
+============================================================
+data_atual: 29/02/2024
+data_atual_mes_subsequente: 28/03/2024
+============================================================
+{'IPCA': '433', 'IPCA-15': '7478', 'SELIC-COPOM': '432', 'SELIC': '4390', 'TR': '226', 'INPC': '188', 'IGP-M': '189'}
+A solicitação 7478 excedeu o tempo limite.
+A solicitação 4390 excedeu o tempo limite.
+A solicitação 189 excedeu o tempo limite.
+{'IPCA-15': '7478', 'SELIC': '4390', 'IGP-M': '189'}
+A solicitação 7478 excedeu o tempo limite.
+A solicitação 4390 excedeu o tempo limite.
+A solicitação 189 excedeu o tempo limite.
+{'IPCA-15': '7478', 'SELIC': '4390', 'IGP-M': '189'}
+A solicitação 7478 excedeu o tempo limite.
+{'IPCA-15': '7478'}
+Indexadores do mês:
+IPCA:  01/01/2024 valor: 0.42
+SELIC-COPOM:  01/01/2024 valor: 11.75
+TR:  01/02/2024 valor: 0.0875
+INPC:  01/01/2024 valor: 0.57
+SELIC:  01/01/2024 valor: 0.97
+IGP-M:  01/01/2024 valor: 0.07
+IPCA-15:  01/01/2024 valor: 0.31
