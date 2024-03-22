@@ -1,6 +1,6 @@
 ''' seleciona todas as tabelas de indexadores e de indices pnep '''
 query0 = "SELECT nome FROM descricao_tabelas \
-      WHERE codigo < 200" # substituir depois por <300 
+      WHERE codigo < 300" # substituir depois por <300 
 
 ''' seleciona as tabelas de indexadores exceto inpc e ipca para atualizacao do dia 1 '''
 query1 = "SELECT nome FROM descricao_tabelas \
@@ -28,8 +28,8 @@ query6 = "UPDATE logatualizacao SET data_atualizacao='$1' WHERE codigo_tabela=$2
 ''' seleciona o nome da tabela pelo codigo '''
 query7 = "SELECT codigo FROM descricao_tabelas"
 
-''' seleciona a data de atualização pelo código na tabela logatualizacao '''
-query8 = "SELECT data_atualizacao FROM logatualizacao WHERE codigo_tabela=$"
+''' seleciona a codigo e data de atualização na tabela logatualizacao '''
+query8 = "SELECT codigo_tabela, data_atualizacao FROM logatualizacao"
 
 ''' faz um update da coluna processar da tabela logatualizacao'''
 query9 = "UPDATE logatualizacao SET processar=1 WHERE codigo_tabela=$"
@@ -53,7 +53,7 @@ query16 = "SELECT B.nome, A.data_atualizacao \
            FROM logatualizacao A \
            INNER JOIN indexadores B ON A.indexador = B.codigo \
            WHERE A.processar=1"
-'''
+
 query17 = "SELECT indexadores.nome, descricao_tabelas.nome \
            FROM descricao_tabelas \
            JOIN indexadores ON CAST(descricao_tabelas.indexador AS INTEGER) = indexadores.codigo \
@@ -65,7 +65,7 @@ query17 = "SELECT indexadores.nome, descricao_tabelas.nome \
            JOIN indexadores ON descricao_tabelas.regra_de_calculo = indexadores.codigo \
            JOIN logatualizacao ON descricao_tabelas.regra_de_calculo = logatualizacao.indexador \
            WHERE logatualizacao.processar = 1" 
-
+'''
 
 
 query18 = "SELECT codigo FROM descricao_tabelas WHERE nome='$1'"

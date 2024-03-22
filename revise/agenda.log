@@ -562,3 +562,30 @@ INFO:2024-02-28 23:03:49,885 — igpm data atualizada: 2023-08-01
 INFO:2024-02-28 23:03:49,885 — ipca15 data atualizada: 2023-11-01
 INFO:2024-02-28 23:03:49,885 — selic data atualizada: 2024-01-01
 INFO:2024-02-28 23:03:49,885 — seliccopom data atualizada: 2024-01-01
+INFO:2024-03-01 16:36:47,515 — ===============================================================
+INFO:2024-03-01 16:36:47,515 — Atualização da coluna data_atualizacao na tabela logatualizacao
+INFO:2024-03-01 16:36:47,516 — inpc data atualizada: 2023-12-01
+INFO:2024-03-01 16:36:47,517 — ipca data atualizada: 2024-01-01
+INFO:2024-03-01 16:36:47,517 — tr data atualizada: 2024-01-01
+INFO:2024-03-01 16:36:47,517 — igpm data atualizada: 2023-08-01
+INFO:2024-03-01 16:36:47,518 — ipca15 data atualizada: 2023-11-01
+INFO:2024-03-01 16:36:47,518 — selic data atualizada: 2024-01-01
+INFO:2024-03-01 16:36:47,518 — seliccopom data atualizada: 2024-01-01
+INFO:2024-03-01 16:39:35,556 — ===============================================================
+INFO:2024-03-01 16:39:35,556 — Atualização da coluna data_atualizacao na tabela logatualizacao
+INFO:2024-03-01 16:39:35,558 — inpc data atualizada: 2023-12-01
+INFO:2024-03-01 16:39:35,558 — ipca data atualizada: 2024-01-01
+INFO:2024-03-01 16:39:35,558 — tr data atualizada: 2024-01-01
+INFO:2024-03-01 16:39:35,558 — igpm data atualizada: 2023-08-01
+INFO:2024-03-01 16:39:35,559 — ipca15 data atualizada: 2023-11-01
+INFO:2024-03-01 16:39:35,559 — selic data atualizada: 2024-01-01
+INFO:2024-03-01 16:39:35,559 — seliccopom data atualizada: 2024-01-01
+INFO:2024-03-01 16:40:48,105 — ===============================================================
+INFO:2024-03-01 16:40:48,105 — Atualização da coluna data_atualizacao na tabela logatualizacao
+INFO:2024-03-01 16:40:48,106 — inpc data atualizada: 2023-12-01
+INFO:2024-03-01 16:40:48,106 — ipca data atualizada: 2024-01-01
+INFO:2024-03-01 16:40:48,106 — tr data atualizada: 2024-01-01
+INFO:2024-03-01 16:40:48,106 — igpm data atualizada: 2023-08-01
+INFO:2024-03-01 16:40:48,107 — ipca15 data atualizada: 2023-11-01
+INFO:2024-03-01 16:40:48,107 — selic data atualizada: 2024-01-01
+INFO:2024-03-01 16:40:48,107 — seliccopom data atualizada: 2024-01-01

@@ -1,5 +1,5 @@
 from bt_database import *
-from bt_conf_debug import *
+from bt_data_tools import converter_data_para_str
 
 ''' Este módulo vai verificar em cada tabela de indexadores e em cada tabela de índices-pnep 
     a data do último registro inserido. 
@@ -9,13 +9,20 @@ from bt_conf_debug import *
     seguinte, evitando que haja saltos em algum mês.   
 '''
 
-def atualizar_log_datas():    
+def obter_as_datas_ultimos_registros(): 
+    print(f"----------------------------------\nobter_as_datas_ultimos_registros()\n----------------------------------")   
     tabelas = selecionar_tabelas(query0) # seleciona todas as tabelas (index e indices)
-    datas = seleciona_ultima_data_das_tabelas(tabelas,query3) # seleciona a data do último registro
+    #print(f"tabelas:\n{tabelas}")
+    datas = seleciona_ultima_data_das_tabelas(tabelas,query3) # seleciona as datas dos últimos registros
+    #print(f"datas:\n{datas}")
     codigos = selecionar_codigos_tabelas(datas,query4) # seleciona os códigos das tabelas
+    
+    for i in codigos:
+        print(f"{i[0]}:  {i[1]}  {converter_data_para_str(i[2])}")
+    
     # atualiza a tabela logatualizacao com a ultima data de cada tabela de indexadores
-    resposta = update_datas_logatualizacao(codigos, query6) # UPDATE logatualizacao SET data_atualizacao='$1' WHERE codigo_tabela=$2  
-    return resposta
+    update_datas_logatualizacao(codigos, query6) # UPDATE logatualizacao SET data_atualizacao='$1' WHERE codigo_tabela=$2     
+    return None
 
     
     

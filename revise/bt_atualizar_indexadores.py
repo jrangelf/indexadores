@@ -3,10 +3,10 @@ from bt_database import *
 from bt_consulta_bcb_indexadores import *
 from bt_data_tools import *
 
-''' Este módulo vai atualizar os indexadores     com a data do mês subsequente ao que estiver indicado na tabela
-    logatualizacao '''
+''' Este módulo vai atualizar os indexadores com a data do mês subsequente ao que 
+    estiver indicado na tabela logatualizacao '''
 
-def atualizar_indexadores(indexadores):
+def atualizar_indexadores(indexadores,data_busca, data_retorno):
     
     atualizadas = []   
     codigos = selecionar_multiplos(query17)
@@ -18,13 +18,18 @@ def atualizar_indexadores(indexadores):
     for indexador in indexadores:
         nome_indexador = indexador[0]
         tabela = codigo_dict.get(nome_indexador)
-        dt_formatada = converter_formato_ano_mes_dia(indexador[1])
+        
+        dt_formatada = formatar_dmy_para_ymd(indexador[1])        
         valor = indexador[2]
+
         codigotab = obter_codigo_tabela(tabela,query18)
 
         print(f"{tabela} ({codigotab})  {dt_formatada} {valor}")        
 
-        pos=inserir_indice_bcb(dt_formatada, valor, query12, tabela)
+        print(f"data_para_inserir_tabela_indexador:{dt_formatada}")
+
+        if data_busca == data_retorno:
+            pos=inserir_indice_bcb(dt_formatada, valor, query12, tabela)
             
         if pos:
             atualizadas.append([indexador[0], indexador[1], indexador[2]])

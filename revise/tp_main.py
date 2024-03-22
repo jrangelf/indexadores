@@ -1,31 +1,24 @@
 
 from bt_queries import *
 from bt_database import *
-from bt_atualizar_log_datas import *
-from bt_atualizar_log_processar import *
-from datetime import datetime
+from bt_marcar_tabelas_para_atualizacao import *
+#from datetime import datetime
 from bt_atualizar_indexador_quinzenal import *
 from bt_buscar_indexadores_mensais import *
 from bt_consulta_bcb_indexadores import *
-from bt_data_tools import incrementa_mes
+#from bt_data_tools import incrementa_mes
 
-data_atual = datetime.now()
-data_atual_mes_subsequente = incrementa_mes(data_atual)
+data_atual = dia_de_hoje() 
+data_inicial_indexador = formatar_data_inicio_mes(data_atual)
+data_final_indexador = incrementa_mes_str(data_inicial_indexador)
 
-#data_formatada =  data_atual.strftime("%Y-%m-%d %H:%M:%S")
-#data_subsequente_formatada = data_atual_mes_subsequente.strftime("%Y-%m-%d %H:%M:%S")
-
-data_formatada =  data_atual.strftime("%d/%m/%Y")
-data_subsequente_formatada = data_atual_mes_subsequente.strftime("%d/%m/%Y")
-
-print(f"data_atual: {data_formatada}")
-print(f"data_atual_mes_subsequente: {data_subsequente_formatada}")
-
+print(f"\ndata_atual: {formatar_data_dmy(data_atual)}\n")
+print(f"indexador:\n  -data_inicial: {data_inicial_indexador}")
+print(f"  -data_final: {data_final_indexador}")
 print("============================================================")
 
-data_inicial = "01/01/2024"
-data_final = "01/02/2024"
-
+data_inicial = "01/02/2024" #data_inicial_indexador 
+data_final = "01/03/2024" #data_final_indexador 
 
 
 indexadores_do_mes =[]
@@ -47,8 +40,12 @@ while indexes:
                 for i in resposta:
                     if i['data']==data_inicial and i['datafim'] == data_final:
                         valor = i['valor']
-                        data = i['datafim']
+                        # por conta de ser a TR, colocar data = data_inicial
+                        #data = i['datafim']
+                        data = i['data']
                         del indexes[indexador]
+                        
+                        
             
             else:
                 valor = resposta[0]['valor']
@@ -58,7 +55,7 @@ while indexes:
             indexadores_do_mes.append([indexador, data, valor])
         
 
-print("Indexadores do mês:")
+print(f"\nIndexadores do mês:")
 for item in indexadores_do_mes:
     print(f"{item[0]}:  {item[1]} valor: {item[2]}")
 

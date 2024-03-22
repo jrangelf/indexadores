@@ -1,33 +1,42 @@
-import os
-#from datetime import datetime
 from bt_data_tools import ler_data_arquivo, gravar_data_arquivo, verificar_quinzena, mesmo_mes
-from bt_atualizar_log_datas import *
-from bt_atualizar_log_processar import *
-from bt_buscar_indexadores_quinzenais import *
-from bt_buscar_indexadores_mensais import *
+from bt_obter_datas_ultimos_registros import *
+from bt_marcar_tabelas_para_atualizacao import *
+
 from bt_buscar_indexadores import *
 from bt_atualizar_indexadores import *
 from bt_conf_debug import *
 
-''' Este módulo é executado todo dia às 8h00 '''
+''' Este módulo é executado todo dia às 8h00.
+    Verifica em logatualizacao se ha na coluna processar valor = 1.
+    Se houver, vai atualizar esse indice para a data do mes subsequente.
+    Assim, se a coluna processar tiver valor 1 e a data 01/04/2023, 
+    esse indexador sera atualizado para 01/05/2023.
+'''
 
 
-''' antes de verificar se houve mudança de mes ou se estamos na quinzena
-este modulo vai procurar em logatualizacao se ha na coluna processar o valor 1
-na tabela logatualizacao. Se houver, vai atualizar todos os indices ate a data presente
-primeiro.'''
+data_atual = dia_de_hoje() 
+#data_inicial_indexador = formatar_data_inicio_mes(data_atual)
+#data_final_indexador = incrementa_mes_str(data_inicial_indexador)
 
-data_atual = dia_de_hoje()
-nome_arquivo = '/revise/bt_data.txt'
+print(f"\ndata_atual: {formatar_data_dmy(data_atual)}\n")
+#print(f"indexador:\n  -data_inicial: {data_inicial_indexador}")
+#print(f"  -data_final: {data_final_indexador}")
+print("============================================================")
 
-#atualizar_log_datas() # atualiza todo inicio de mês.        
-atualizar_log_processar(data_atual) # atualiza todo inicio mês
-indexadores_do_mes = buscar_indexadores()
 
+#obter_as_datas_ultimos_registros()
+
+#marcar_tabelas_para_atualizacao(data_atual)
+
+#obter os indexadores do mes que precisam ser atualizados
+indexadores_do_mes, data_busca, data_retorno = buscar_indexadores()
+
+print(f"data_busca:{data_busca}\ndata_retorno:{data_retorno}")
 print(f"indexadores_do_mes: {indexadores_do_mes}")
 
-#if indexadores_do_mes:
-#    atualizadas = atualizar_indexadores(indexadores_do_mes)
+if indexadores_do_mes:
+    print("**")
+    #atualizadas = atualizar_indexadores(indexadores_do_mes,data_busca,data_retorno)
 
 
 
